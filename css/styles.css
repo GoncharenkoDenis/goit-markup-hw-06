@@ -174,6 +174,9 @@ letter-spacing: 0.02em;
 .contact-list{
     color: var(--primary-text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contact-list:hover{
     color: var(--accent-color);
@@ -549,11 +552,15 @@ color: var(--white-bg-color);
     align-items: baseline;
 }
 .footer-feedback{
-margin-left: 93px;
+margin-left: auto;
 }
-/* .footer-form{
-    margin-left: 93px;
-} */
+.feedback-title{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer-form{
+    display: flex;
+}
 .footer-form input{
     width: 358px;
     height: 50px;
@@ -561,8 +568,12 @@ margin-left: 93px;
     border-radius: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     background-color: var(--footer-bg-color);
+    color: var(--white-bg-color);
 }
 .submit-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 200px;
     min-height: 50px;
     border: 1px solid transparent;
@@ -571,8 +582,11 @@ margin-left: 93px;
     background-color: var(--accent-color);
     color: var(--white-bg-color);
     font-weight: 700;
+    letter-spacing: 0.06em;
 font-size: 16px;
 line-height: 1.8;
+
+margin-left: 12px;
 }
 .icon-send{
     fill: currentColor;
@@ -745,21 +759,21 @@ color: var(--primary-text-color);
 
     width: 528px;
     height: 581px;
+    padding: 40px;
 
     background-color: var(--white-bg-color);
 }
 .icon-close{
-    width: 100%;
-    height: 100%;
-    fill: var(--black-color);
-    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
     background-color: var(--white-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .button-close{
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;
@@ -768,9 +782,13 @@ color: var(--primary-text-color);
     height: 30px;
     border-radius: 50%;
     transform: translate(-8px,8px);
-    
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     
+}
+.button-close:hover{
+    color: var(--accent-color);
 }
 textarea{
     resize: none;
@@ -780,15 +798,12 @@ textarea{
 font-size: 20px;
 line-height: 1.15;
 text-align: center;
-padding-top: 40px;
-padding-bottom: 12px;
+margin: 12px;
 }
 .form{
 font-size: 12px;
 line-height: 1.16;
 letter-spacing: 0.01em;
-    width: 448px;
-    height: 342px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -814,7 +829,8 @@ letter-spacing: 0.01em;
     text-align: center;
 font-size: 14px;
 line-height: 1.71;
-color:var(--primary-text-color)
+color:var(--primary-text-color);
+justify-content: center;
 }
 .policy-span{
     color: var(--accent-color);
@@ -829,6 +845,9 @@ color:var(--black-color);
 }
 .comment ::placeholder{
     color:rgba(117, 117, 117, 0.5);
+}
+.comment:focus{
+outline-color: var(--accent-color);
 }
 .modal-submit{
     display: block;
@@ -851,16 +870,23 @@ color: #FFFFFF;
 .form-field {
     position: relative;
 }
+.form-input{
+    display: block;
+    position: relative;
+}
 .form-field .form-input{
     padding: 12px 42px;
+}
+.form-input:focus{
+    outline-color:var(--accent-color);
 }
 .form-field:focus{
     border-color: var(--accent-color);
 }
-.form-input:focus ~ .current-icon{
+.form-input:focus ~ .icon-form{
 color: var(--accent-color);
 }
-.icon-name{
+.icon-form{
     position: absolute;
     top: 50%;
     left: 12px;
@@ -869,29 +895,12 @@ color: var(--accent-color);
     width: 18px;
     height: 18px;
 
-    fill: currentColor;
-}
-.icon-modal-tel{
-    position: absolute;
-    top: 50%;
-    left: 12px;
-
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-}
-.icon-modal-mail{
-    position: absolute;
-    top: 50%;
-    left: 12px;
-
-    display: inline-block;
-    width: 18px;
-    height: 18px;
     fill: currentColor;
 }
 /* Policy */
+.policy{
+    margin-top: 20px;
+}
 .label-policy{
     display: flex;
     align-items: center;
