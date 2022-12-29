@@ -166,6 +166,9 @@ letter-spacing: 0.02em;
     align-items: baseline;
 }
 .contact .item {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-right: 50px;
 }
 .contact .item:last-child{
@@ -186,7 +189,7 @@ letter-spacing: 0.02em;
 .contact-list:focus{
     color: var(--accent-color);
 }
-.icon-tel{
+.contact-icon{
     margin-right: 10px;
     fill: var(--primary-text-color);
 }
@@ -194,7 +197,7 @@ letter-spacing: 0.02em;
     margin-right: 10px;
     fill: var(--primary-text-color);
 }
-.contact-list:hover .icon-tel,.contact-list:hover .icon-mail{
+.contact-list:hover .contact-icon{
 fill: currentColor;
 }
 .link{
